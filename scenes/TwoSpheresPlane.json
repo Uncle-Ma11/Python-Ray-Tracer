@@ -1,0 +1,84 @@
+{
+    "resolution": [640, 480],
+    "AA": { "jitter": false, "samples": 3 },
+    "ambient": [0.2, 0.2, 0.2],
+    "camera": {
+        "position": [0.0, 4.0, 6.0],
+        "lookAt": [0.0, 2.0, 0.0],
+        "up": [0.0, 1.0, 0.0],
+        "fov": 45.0       
+    },
+    "depth": 1,
+    "materials": [
+        {
+            "name": "blue", "ID": 0, 
+            "diffuse": [0.0, 0.0, 1.0], "specular": [0.5, 0.5, 0.5],
+            "hardness": 16,
+            "reflective": false,
+            "refractive": false,
+            "IOR": 1.0
+        },
+        {
+            "name": "red", "ID": 1, 
+            "diffuse": [1.0, 0.0, 0.0], "specular": [0.5, 0.5, 0.5],
+            "hardness": 50,
+            "reflective": false,
+            "refractive": false,
+            "IOR": 1.0
+        },
+        {
+            "name": "black", "ID": 2, 
+            "diffuse": [0.0, 0.0, 0.0], "specular": [0.0, 0.0, 0.0],
+            "hardness": 0,
+            "reflective": false,
+            "refractive": false,
+            "IOR": 1.0
+        },
+        {
+            "name": "white", "ID": 3, 
+            "diffuse": [1.0, 1.0, 1.0], "specular": [0.0, 0.0, 0.0],
+            "hardness": 0,
+            "reflective": false,
+            "refractive": false,
+            "IOR": 1.0
+        }
+    ],    
+    "objects": [
+        {
+            "name": "plane", "type": "plane",
+            "normal": [0.0, 1.0, 0.0],
+            "position": [0.0, 0.0, 0.0],
+            "materials": [2, 3]
+        },
+        {
+            "name": "sphere0",
+            "type": "sphere",
+            "radius": 1.1,
+            "position": [-1.0, 1.1, -1.0],
+            "materials": [1]
+        },
+        {
+            "name": "sphere1",
+            "type": "sphere",
+            "radius": 0.5,
+            "position": [0.5, 0.5, -0.5],
+            "materials": [0]
+        }        
+    ],
+    "lights": [
+        {
+            "name": "light1",
+            "type": "point",
+            "position": [10.0, 5.0, 10.0],
+            "colour": [0.8, 0.2, 0.2],
+            "power": 0.6
+        },
+        {
+            "name": "light2",
+            "type": "point",
+            "position": [-10.0, 10.0, 2.0],
+            "colour": [0.8, 0.8, 0.8],
+            "power": 0.9
+        }
+    ]
+}
